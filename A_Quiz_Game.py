@@ -28,25 +28,25 @@ question_num = 0
 # Question and Answer showing
 for question in questions:
     print("__________________________")
-    print(question)
+    print(question) # Question show
 
     for option in options[question_num]:
-        print(option)
+        print(option) # Option show
 
-    guess = input("Choose the correct answer from [A, B, C, D]:  ").upper()
+    guess = input("Choose the correct answer from [A, B, C, D]:  ").upper() # Take answer
     guesses.append(guess)
-    if guess == answers[question_num]:
+    if guess == answers[question_num]: # Wishing condition
         score += 2
         print("   Congratulation.  \n This is correct Answer !")
     else:
         print(f"Wrong answer.Correct answer is |{answers[question_num]}|")
 
-    question_num += 1
+    question_num += 1 # Swap question and answer
 
-print(f"Your score is: [{score}]")
+print(f"Your score is: [{score}]") # Score showing
 
-
-if score >= 6:
+# Reword
+if score >= 6: 
     print("Good job.You are a topper boy.")
 else:
     print("Ok. No problem, I wish that you will do better in next time.")
